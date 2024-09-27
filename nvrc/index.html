@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
    
-    <title>Immersive Video Compression using Implicit Neural Representations</title>
+    <title>NVRC: Neural Video Representation Compression</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link rel="stylesheet" href="../css/style.css">
@@ -33,15 +33,15 @@
                     <div class="row vertical-align">
                         <div class="col-md-7">
                             <div class="title">
-                                <h1><center>Immersive Video Compression using Implicit Neural Representations</center></h1>
-                                <h4><center>PCS 2024</center></h4>
+                                <h1><center>NVRC: Neural Video Representation Compression</center></h1>
+                                <h4><center>NeurIPS 2024</center></h4>
                                 </br>
-                                <p><center>Ho Man Kwan&dagger; · Fan Zhang&dagger; · Andrew Gower&Dagger; · David Bull&dagger;</center></p>
+                                <p><center>Ho Man Kwan&dagger; · Ge Gao&dagger; · Fan Zhang&dagger; · Andrew Gower&Dagger; · David Bull&dagger;</center></p>
                                 <center>&dagger;Visual Information Lab, University of Bristol, UK</center>
                                 <center>&Dagger;Immersive Content & Comms Research, BT, UK</center>
                                 </br>
                                 <h6><p></p>
-                                    <a href='https://arxiv.org/abs/2402.01596'>[arXiv]
+                                    <a href='https://arxiv.org/abs/2409.07414'>[arXiv]
                                 </p></h6>
                             </div>
                         </div>
@@ -56,22 +56,23 @@
             <br>
 
             <div class="container-md">
-            <h2>Abstract</h2>
-            <p>
-                Recent work on implicit neural representations (INRs) has evidenced their potential for efficiently representing and encoding conventional video content. In this paper we, for the first time, extend their application to immersive (multi-view) videos, by proposing MV-HiNeRV, a new INR-based immersive video codec. MV-HiNeRV is an enhanced version of a state-of-the-art INR-based video codec, HiNeRV, which was developed for single-view video compression. We have modified the model to learn a different group of feature grids for each view, and share the learnt network parameters among all views. This enables the model to effectively exploit the spatio-temporal and the inter-view redundancy that exists within multi-view videos. The proposed codec was used to compress multi-view texture and depth video sequences in the MPEG Immersive Video (MIV) Common Test Conditions, and tested against the MIV Test model (TMIV) that uses the VVenC video codec. The results demonstrate the superior performance of MV-HiNeRV, with significant coding gains (up to 72.33%) over TMIV. The implementation of MV-HiNeRV will be published for further development and evaluation.
-            </p>
-            </div>
-
+                <h2>Abstract</h2>
+                <p>
+                    Recent advances in implicit neural representation (INR)-based video coding have demonstrated its potential to compete with both conventional and other learning-based approaches. With INR methods, a neural network is trained to overfit a video sequence, with its parameters compressed to obtain a compact representation of the video content. However, although promising results have been achieved, the best INR-based methods are still out-performed by the latest standard codecs, such as VVC VTM, partially due to the simple model compression techniques employed. In this paper, rather than focusing on representation architectures as in many existing works, we propose a novel INR-based video compression framework, Neural Video Representation Compression (NVRC), targeting compression of the representation. Based on the novel entropy coding and quantization models proposed, NVRC, for the first time, is able to optimize an INR-based video codec in a fully end-to-end manner. To further minimize the additional bitrate overhead introduced by the entropy models, we have also proposed a new model compression framework for coding all the network, quantization and entropy model parameters hierarchically. Our experiments show that NVRC outperforms many conventional and learning-based benchmark codecs, with a 24% average coding gain over VVC VTM (Random Access) on the UVG dataset, measured in PSNR. As far as we are aware, this is the first time an INR-based video codec achieving such performance. The implementation of NVRC will be released.
+                </p>
+                </div>
+    
             <hr/>
             <div class="container-md">
             <h2>Citation</h2>
-<pre class="citation">@inproceedings{
-    author       = {Ho Man Kwan and Fan Zhang and Andrew Gower and David Bull},
-    title        = {Immersive Video Compression Using Implicit Neural Representations},
-    booktitle    = {{PCS}},
-    pages        = {1--5},
-    publisher    = {{IEEE}},
-    year         = {2024}
+<pre class="citation">@misc{kwan2024nvrc,
+    title={NVRC: Neural Video Representation Compression}, 
+    author={Ho Man Kwan and Ge Gao and Fan Zhang and Andrew Gower and David Bull},
+    year={2024},
+    eprint={2409.07414},
+    archivePrefix={arXiv},
+    primaryClass={cs.CV},
+    url={https://arxiv.org/abs/2409.07414}, 
 }</pre>
             </div>
         </div>
